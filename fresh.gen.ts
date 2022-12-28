@@ -11,6 +11,9 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
+import * as $$$2 from "./sections/Header.tsx";
+import * as $$$3 from "./sections/MainSection.tsx";
+import * as $$$4 from "./sections/SkillsSection.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -20,7 +23,13 @@ const manifest: DecoManifest = {
     "./routes/index.tsx": $3,
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
-  sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
+  sections: {
+    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Head.tsx": $$$1,
+    "./sections/Header.tsx": $$$2,
+    "./sections/MainSection.tsx": $$$3,
+    "./sections/SkillsSection.tsx": $$$4,
+  },
   functions: {},
   schemas: {
     "./sections/GetStarted.tsx": {
@@ -87,6 +96,47 @@ const manifest: DecoManifest = {
           "themeColor",
         ],
       },
+      "outputSchema": null,
+    },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "string",
+            "title": "Active",
+          },
+        },
+        "required": [
+          "active",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/MainSection.tsx": {
+      "inputSchema": {
+        "title": " Main Section",
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "title": "Nome",
+          },
+          "sobre": {
+            "type": "string",
+            "title": "Sobre",
+          },
+        },
+        "required": [
+          "nome",
+          "sobre",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/SkillsSection.tsx": {
+      "inputSchema": null,
       "outputSchema": null,
     },
   },
